@@ -21,11 +21,7 @@ authRouter.post('/signup', async(req, res, next) => {
 })
 
 authRouter.post('/login', async (req, res, next) => {
-    try {
-
-    } catch {
-        
-    }
+    
 })
 
 module.exports = authRouter
