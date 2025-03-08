@@ -1,4 +1,4 @@
-const express = require ('express')
+const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 const morgan = require('morgan')
@@ -17,6 +17,8 @@ async function connectToDb(){
 }
 
 connectToDb()
+
+app.use('/api/auth', require('./routes/authRouter'))
 
 app.use((err, req, res, next) => {
     console.log(err)
